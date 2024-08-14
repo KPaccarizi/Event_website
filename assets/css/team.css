@@ -4,12 +4,18 @@
 .section-padding {
     padding: 60px 0;
     background-color: #f9f9f9; /* Light background for the section */
-    background-image: url('assets/img/background.jpg'); /* Path to your background image */
+    background-image: url('assets/img/background/image.png'); /* Path to your background image */
     background-size: cover; /* Ensures the image covers the section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating the image */
 }
-
+.background-image {
+    background-image: url('assets/img/background/image.png');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+  }
+  
 /* Team row layout */
 .team-row {
     display: flex;
