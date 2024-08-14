@@ -1,4 +1,4 @@
-# Event_website
+
 # DevFest Kosova Website
 
 ## Overview
