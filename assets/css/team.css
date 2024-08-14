@@ -1,58 +1,92 @@
 /* team.css */
+
+/* Section padding and background */
 .section-padding {
     padding: 60px 0;
+    background-color: #f9f9f9; /* Light background for the section */
+    background-image: url('assets/img/background.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
 }
 
+/* Team row layout */
 .team-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0; /* Reduce gap between items */
     justify-content: center; /* Center items horizontally */
 }
 
+/* Individual team item styling */
 .team-item {
     text-align: center;
     flex: 1 1 23%; /* Allows up to 4 items per row */
-    max-width: 23%; /* Adjusts for space between items */
-    margin-bottom: 120px; /* Space below each item */
+    max-width: 23%; /* Adjusts for larger cards */
+    margin: 0 10px 20px; /* Adjust spacing between items */
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensures content stays within rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    background-image: url('assets/img/card-background.jpg'); /* Path to your card background image */
+    background-size: cover; /* Ensures the image covers the card */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
 }
 
+.team-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Team image styling */
 .team-img {
-    width: 100%;
-    height: auto;
+    width: 150px; /* Larger size for images */
+    height: 150px;
     border-radius: 50%; /* Make the image a circle */
-    max-width: 150px; /* Adjust size as needed */
     display: block; /* Ensures image takes the full width of the container */
     margin: 0 auto; /* Center image horizontally */
     object-fit: cover; /* Ensures the image covers the circle area */
+    border: 4px solid #ddd; /* Light gray border around images */
 }
 
+/* Info text styling */
 .info-text {
-    margin-top: 10px;
+    margin-top: 15px; /* Adjust spacing between image and text */
+    padding: 10px; /* Padding inside the info text block */
 }
 
+/* Heading styles */
 h3 {
     margin-top: 40px;
     font-size: 24px;
     font-weight: bold;
+    color: #333; /* Darker text color for headings */
 }
 
 h4 {
-    font-size: 18px;
-    margin: 10px 0;
+    font-size: 16px; /* Larger font size for names */
+    margin: 5px 0; /* Adjust spacing around text */
+    color: #555; /* Slightly lighter text color */
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
     .team-item {
         flex: 1 1 46%; /* Two items per row on smaller screens */
     }
     .team-img {
-        max-width: 120px; /* Adjust for smaller screens */
+        width: 120px; /* Adjust size for smaller screens */
+        height: 120px;
     }
 }
 
 @media (max-width: 576px) {
     .team-item {
         flex: 1 1 100%; /* One item per row on very small screens */
+    }
+    .team-img {
+        width: 100px; /* Adjust size for very small screens */
+        height: 100px;
     }
 }
