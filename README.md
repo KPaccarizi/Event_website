@@ -22,8 +22,3 @@ This repository contains the code for the DevFest Kosova website. The site provi
 - **Registration**: Form for users to register for the event.
 - **Responsive Design**: Optimized for various devices and screen sizes.
 
-## Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
