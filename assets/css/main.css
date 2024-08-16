@@ -843,15 +843,20 @@ a.back-to-top:hover, a.back-to-top:focus {
     color: #212121;
   }
 }
-
 @media (max-width: 991px) {
   .bg-inverse {
-    background: #fff !important;
+    background: #000000 !important;
     box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
   }
   .navbar-expand-lg .navbar-brand, .navbar-expand-lg .navbar-toggler {
     margin: 0px 15px;
   }
+
+  .navbar-expand-lg .navbar-toggler {
+    margin-top: 0px; /* Adjust this value to lower the toggler */
+}
+
+
   .navbar-nav {
     padding: 5px 15px;
   }
@@ -861,7 +866,12 @@ a.back-to-top:hover, a.back-to-top:focus {
     padding: 0px 40px;
     color: #212121;
   }
+  /* Add this to position the navbar lower */
+  .navbar {
+    margin-top: 0px; /* Adjust the value as needed */
+  }
 }
+
 
 #about {
   background: #F6F9F9;
@@ -1140,6 +1150,7 @@ h1 {
   margin-bottom: 20px;
   font-weight: 700;
 }
+
 
 /* Sponsors Area */
 /* Sponsors Area */
@@ -2271,6 +2282,7 @@ footer {
   background: #F6F9F9;
 }
 
+/* Default styles for larger screens */
 #count .count-wrapper {
   background-image: linear-gradient(65deg, #4285f4 0, #8cb1ec 100%);
   border-radius: 4px;
@@ -2284,6 +2296,24 @@ footer {
   display: inline-block;
   width: 100%;
 }
+/* Styles for screens 991px and smaller */
+@media (max-width: 991px) {
+  #count .count-wrapper {
+    padding: 10px 0; /* Reduce padding for smaller screens */
+    font-size: 12px; /* Reduce font size to fit smaller space */
+  }
+}
+
+/* Styles for screens 767px and smaller */
+@media (max-width: 767px) {
+  #count .count-wrapper {
+    padding: 5px 0; /* Further reduce padding for very small screens */
+    font-size: 10px; /* Further reduce font size for very small screens */
+    margin: 0 auto; /* Center the wrapper if necessary */
+    width: 100%; /* Ensure full width */
+  }
+}
+
 
 .time-count div {
   text-align: center;
