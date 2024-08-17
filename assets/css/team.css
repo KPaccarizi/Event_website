@@ -9,12 +9,7 @@
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating the image */
 }
-.background-image {
-    background-image: url('assets/img/background/image.png');
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image repetition */
-  }
+
   
 /* Team row layout */
 .team-row {
