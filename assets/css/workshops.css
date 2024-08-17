@@ -1,13 +1,52 @@
-/* Pricing Ticket */
-#pricing {
-    background: #94bfef;
-    position: relative;
+/* Full-page video background */
+#pricing #bg-video {
+    position: fixed; /* Fix the video in the viewport */
+    top: 0;
+    left: 0;
+    width: 200vw; /* Full viewport width */
+    height: 200vh; /* Full viewport height */
+    object-fit: cover; /* Scale the video to cover the entire area without distortion */
+    z-index: -1; /* Place the video behind the content */
+    opacity: 1; /* Adjust opacity if needed */
+    background-color: rgba(18, 18, 18, 0.5); /* Optional: fallback color */
 }
+
+/* Ensure your content is on top of the video */
+#pricing {
+    position: relative;
+    z-index: 1;
+    padding: 10px 0; /* Adjust padding as needed */
+    min-height: 100vh; /* Ensure the section covers the full height of the viewport */
+}
+
+/* Additional styling for better content visibility */
+#pricing .container {
+    position: relative;
+    z-index: 1;
+    color: #ffffff; /* Adjust text color for readability */
+    text-align: center;
+}
+
+
+
 
 #pricing .row {
     display: flex;
     justify-content: center;
     align-items: stretch; /* Ensure columns are aligned properly */
+    color: #f5e9e9;
+
+}
+
+.section-title {
+font-size: 30px;
+    color: #f3eded;
+    line-height: 52px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
 }
 
 #pricing .col-lg-3,
@@ -19,6 +58,13 @@
     flex: 0 0 25%; /* Adjust to desired width for large screens */
     max-width: 100%;
 }
+
+
+.colmun-title h6 {
+    color: #000000; /* Set text color to black */
+    font-weight: bold; /* Ensure text is bold */
+}
+
 
 #pricing .price-block-wrapper {
     display: flex;
@@ -47,7 +93,7 @@
 
 #pricing .price-block-wrapper .colmun-title h5 {
     font-size: 18px;
-    color: #212121;
+    color: #000000;
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -124,7 +170,7 @@
 }
 
 #pricing .active .colmun-title h5 {
-    color: #0b0b0b;
+    color: #171616;
 }
 
 #pricing .active .price h2 {
@@ -152,7 +198,7 @@
 
 #pricing .active .btn {
     background: #1d5bb1;
-    color: #ffffff;
+    color: #f8f8f8;
 }
 
 .btn-common {

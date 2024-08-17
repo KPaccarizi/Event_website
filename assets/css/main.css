@@ -123,7 +123,7 @@ ul li, ol li {
 
 .section-title {
   font-size: 30px;
-  color: #212121;
+  color: #111111;
   line-height: 52px;
   font-weight: 700;
   text-align: center;
@@ -1943,6 +1943,11 @@ h1 {
   height: 580px;
 }
 
+#contact-title .section-title {
+  color: #ffffff; /* White color for the title text */
+}
+
+
 .title-forme {
   font-size: 28px;
   margin-bottom: 20px;
@@ -2012,7 +2017,7 @@ h1 {
   line-height: 26px;
   font-size: 14px;
   box-shadow: none;
-  color: #848484;
+  color: #4a4848;
   background: #f7f7f7;
   border: 1px solid transparent;
   padding: 7px 19px;
@@ -2023,7 +2028,7 @@ h1 {
 
 .container-form .form-wrapper .form-control:focus {
   color: #212121;
-  background-color: #fff;
+  background-color: #dbd6d6;
   border-color: #4285f4;
   box-shadow: none;
   outline: 0;
@@ -2053,10 +2058,10 @@ h1 {
   line-height: 27px;
   font-size: 14px;
   box-shadow: none;
-  color: #848484;
-  background: #f7f7f7;
+  color: #848080;
+  background: #5b5959;
   padding: 7px 19px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #575656;
   border-radius: 0px;
   transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
@@ -2072,7 +2077,7 @@ h1 {
 
 /* Inforamation Bar */
 #contact-text {
-  background: #161E26;
+  background: #181818;
 }
 
 #contact-text .contact-wrapper {
@@ -2111,10 +2116,40 @@ h1 {
 
 #contact-text ul li span b {
   font-size: 20px;
-  color: #374045;
+  color: #192228;
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
+}
+/* Full-page video background */
+#contact-map {
+  position: relative;
+  overflow: hidden; /* Ensure video does not overflow its container */
+  min-height: 100vh; /* Ensure the section covers the full height of the viewport */
+}
+
+#contact-map #bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300vw; /* Full viewport width */
+  height: 300vh; /* Full viewport height */
+  object-fit: cover; /* Scale the video to cover the entire area without distortion */
+  z-index: -1; /* Place the video behind the content */
+}
+
+/* Additional styling for better content visibility */
+#contact-map .container {
+  position: relative;
+  z-index: 2;
+  color: #ffffff; /* Adjust text color for readability */
+  text-align: center;
+}
+
+/* Adjust container-form positioning */
+.container-form {
+  position: relative;
+  z-index: 2; /* Ensure form is above the video */
 }
 
 /* Footer Area Start */
