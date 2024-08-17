@@ -94,7 +94,7 @@ h2 {
 }
 
 .social-links a {
-    color: #f2f5f8; /* Dark blue */
+    color: #0b2238; /* Dark blue */
     margin: 0 0.5rem;
     font-size: 1.5rem; /* Increased size for better visibility */
     text-decoration: none;
@@ -102,7 +102,7 @@ h2 {
 }
 
 .social-links a:hover {
-    color: #dce2e9; /* Blue on hover */
+    color: #2a4461; /* Blue on hover */
 }
 
 .section-separator {
