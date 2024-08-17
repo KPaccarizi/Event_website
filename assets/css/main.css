@@ -1654,7 +1654,12 @@ h1 {
 .team-item:hover {
   box-shadow: 0 16px 48px #E2E8ED;
 }
-
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: stretch; /* Ensures all items stretch to the same height */
+}
 .team-item {
   margin: 15px 0;
   padding: 15px;
@@ -1783,6 +1788,7 @@ h1 {
 
 .team-item .info-text h3 a {
   color: #212121;
+
 }
 
 .team-item .info-text h3 a:hover {
