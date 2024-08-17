@@ -1,93 +1,125 @@
-/* team.css */
-
-/* Section padding and background */
-.section-padding {
-    padding: 60px 0;
-    background-color: #f9f9f9; /* Light background for the section */
-    background-image: url('assets/img/background/image.png'); /* Path to your background image */
-    background-size: cover; /* Ensures the image covers the section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating the image */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Ensure text is readable on video */
+    background-color: #000; /* Fallback color if video fails to load */
 }
 
-  
-/* Team row layout */
-.team-row {
+video#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+    z-index: -1; /* Send the video behind all content */
+}
+
+
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    
+
+}
+
+main {
+    padding: 2rem;
+    
+
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h2 {
+    border-bottom: 3px solid #007bff; /* Blue underline */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #003366; /* Dark blue */
+    font-size: 2rem;
+}
+
+.team-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center items horizontally */
+    gap: 1rem;
 }
 
-/* Individual team item styling */
-.team-item {
+.team-member {
+    background: linear-gradient(135deg, #f0faff, #e0eaff); /* Light blue gradient */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
     text-align: center;
-    flex: 1 1 23%; /* Allows up to 4 items per row */
-    max-width: 23%; /* Adjusts for larger cards */
-    margin: 0 10px 20px; /* Adjust spacing between items */
-    background-color: #ffffff; /* White background for each item */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden; /* Ensures content stays within rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    background-image: url('assets/img/card-background.jpg'); /* Path to your card background image */
-    background-size: cover; /* Ensures the image covers the card */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating the image */
+    width: calc(25% - 1rem); /* Adjust width for 4 columns */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.team-item:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+.team-member:hover {
+    transform: translateY(-5px); /* Elevate on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Team image styling */
 .team-img {
-    width: 150px; /* Larger size for images */
-    height: 150px;
-    border-radius: 50%; /* Make the image a circle */
-    display: block; /* Ensures image takes the full width of the container */
-    margin: 0 auto; /* Center image horizontally */
-    object-fit: cover; /* Ensures the image covers the circle area */
-    border: 4px solid #ddd; /* Light gray border around images */
+    width: 120px; /* Slightly larger image */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff; /* Blue border around image */
 }
 
-/* Info text styling */
 .info-text {
-    margin-top: 15px; /* Adjust spacing between image and text */
-    padding: 10px; /* Padding inside the info text block */
+    margin-top: 0.5rem;
 }
 
-/* Heading styles */
-h3 {
-    margin-top: 40px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333; /* Darker text color for headings */
+.info-text h3 {
+    margin: 0.5rem 0;
+    color: #003366; /* Dark blue */
 }
 
-h4 {
-    font-size: 16px; /* Larger font size for names */
-    margin: 5px 0; /* Adjust spacing around text */
-    color: #555; /* Slightly lighter text color */
+.social-links {
+    margin-top: 1rem;
 }
 
-/* Responsive design */
+.social-links a {
+    color: #003366; /* Dark blue */
+    margin: 0 0.5rem;
+    font-size: 1.5rem; /* Increased size for better visibility */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Blue on hover */
+}
+
+.section-separator {
+    border: 0;
+    border-top: 2px solid #007bff; /* Blue separator line */
+    margin: 2rem 0;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-    .team-item {
-        flex: 1 1 46%; /* Two items per row on smaller screens */
-    }
-    .team-img {
-        width: 120px; /* Adjust size for smaller screens */
-        height: 120px;
+    .team-member {
+        width: calc(50% - 1rem);
     }
 }
 
-@media (max-width: 576px) {
-    .team-item {
-        flex: 1 1 100%; /* One item per row on very small screens */
-    }
-    .team-img {
-        width: 100px; /* Adjust size for very small screens */
-        height: 100px;
+@media (max-width: 480px) {
+    .team-member {
+        width: 100%;
     }
 }
