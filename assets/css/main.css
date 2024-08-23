@@ -1,34 +1,45 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:500,700");
+
+
+/* Prevent horizontal scrolling */
 html {
   overflow-x: hidden;
 }
 
+/* Define the font face */
+@font-face {
+  font-family: 'Product Sans';
+  src: url('assets/fonts/Product Sans Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Basic Styles */
+/* Basic Styles */
 body {
   background: #fff;
   font-size: 15px;
   font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  font-family: 'Product Sans', sans-serif; /* Ensure font-family matches @font-face */
   box-sizing: border-box;
-  -webkit-font-smoothing: subpixel-antialiased;
+  /* Font smoothing for better text appearance */
+  -webkit-font-smoothing: antialiased; /* For WebKit browsers (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
   color: #212121;
   line-height: 25px;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow-x: hidden;
 }
 
+
+/* Headings */
 h1, h2, h3, h4, h5 {
   font-size: 36px;
   font-weight: 700;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Product Sans', sans-serif;
 }
 
+/* Links */
 a {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -36,19 +47,21 @@ a:hover {
   text-decoration: none;
 }
 
-a a:focus {
+a:focus {
   outline: none;
 }
 
+/* Paragraphs */
 p {
   font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
-  margin: 0px;
+  font-family: 'Product Sans', sans-serif;
+  margin: 0;
   font-size: 14px;
 }
 
+/* Lists */
 ul, ol {
-  list-style: outside none none;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -57,26 +70,26 @@ ul li, ol li {
   list-style: none;
 }
 
+/* Colored Letters */
 .colored-letter {
   text-transform: uppercase;
   letter-spacing: -0.2em;
- 
-  font-family: Arial, sans-serif; /* Sets the font */
-   /* Adjust the size as needed */
-  font-weight: bold; 
-  display: inline; /* Keeps the letters close together */
-  margin: 0; /* Ensures there is no extra space around the letters */
-  padding: 0; /* Ensures there is no extra space inside the letters */
+  font-family: "Product Sans", sans-serif;
+  font-weight: bold;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
+/* Colored Letter Classes */
 .g { color: #4285F4; }
 .o1 { color: #EA4335; }
 .o2 { color: #FBBC05; }
 .g2 { color: #4285F4; }
 .l { color: #34A853; }
-.e { color: #EA4335;  }
+.e { color: #EA4335; }
 
-
+/* Hero Section */
 .hero-heading {
   font-size: 40px;
   font-weight: 700;
@@ -94,7 +107,8 @@ ul li, ol li {
   letter-spacing: 0.1rem;
 }
 
-.section-titile-bg {
+/* Section Title Background */
+.section-title-bg {
   display: inline;
   font-size: 115px;
   font-weight: 700;
@@ -107,9 +121,10 @@ ul li, ol li {
   text-align: center;
 }
 
+/* Section Title Header */
 .section-title-header .subtitle {
   font-size: 20px;
-  color: 	#4285f4;
+  color: #4285f4;
   margin-bottom: 10px;
   font-style: italic;
 }
@@ -121,29 +136,30 @@ ul li, ol li {
   padding-bottom: 36px;
 }
 
+/* Section Title */
 .section-title {
   font-size: 30px;
   color: #111111;
   line-height: 52px;
   font-weight: 700;
   text-align: center;
-  display: block;
   position: relative;
   margin-bottom: 10px;
 }
 
 .section-title:before {
   content: "[";
-  color: 	#4285f4;
+  color: #4285f4;
   padding-right: 10px;
 }
 
 .section-title:after {
   content: "]";
-  color: 	#4285f4;
+  color: #4285f4;
   padding-left: 10px;
 }
 
+/* Section Subcontent */
 .section-subcontent {
   font-size: 16px;
   text-align: center;
@@ -152,6 +168,7 @@ ul li, ol li {
   padding-bottom: 36px;
 }
 
+/* Section Subtitle */
 .section-sub {
   text-transform: uppercase;
   font-size: 24px;
@@ -168,11 +185,11 @@ ul li, ol li {
   width: 45px;
   left: 50%;
   bottom: 10px;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: 	#4285f4;
+  background-color: #4285f4;
 }
 
+/* Subtitle */
 .subtitle {
   font-size: 15px;
   margin-top: 20px;
@@ -180,46 +197,48 @@ ul li, ol li {
   margin-bottom: 10px;
 }
 
+/* Inner Title */
 .inner-title {
   font-size: 24px;
   font-weight: 700;
   text-transform: capitalize;
 }
 
+/* Page Tagline */
 .page-tagline {
   font-size: 24px;
   font-weight: 400;
   color: #ddd;
 }
 
+/* Page Title */
 .page-title {
   font-size: 62px;
   font-weight: 700;
   color: #fff;
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
 }
 
+/* Buttons */
 .btn {
   font-size: 14px;
   padding: 10px 30px;
   line-height: 22px;
   border-radius: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Product Sans', sans-serif;
   cursor: pointer;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   display: inline-block;
 }
@@ -235,8 +254,9 @@ ul li, ol li {
   color: #fff;
 }
 
+/* Button Types */
 .btn-common {
-  background-image: linear-gradient(65deg, 	#4285f4 0, 	#4178cf 100%);
+  background-image: linear-gradient(65deg, #4285f4 0, #4178cf 100%);
   box-shadow: 0 8px 16px #1d117f40;
   position: relative;
   z-index: 1;
@@ -244,11 +264,9 @@ ul li, ol li {
 
 .btn-common:hover {
   color: #fff;
-  background-image: linear-gradient(65deg, 	#4285f4 0, #4178cf 100%);
+  background-image: linear-gradient(65deg, #4285f4 0, #4178cf 100%);
   box-shadow: 0 8px 16px rgba(12, 15, 89, 0.4);
   transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
 }
 
 .btn-border {
@@ -283,15 +301,18 @@ ul li, ol li {
   text-transform: capitalize;
 }
 
+/* Focused Button Styles */
 button:focus {
   outline: none !important;
 }
 
+/* Icon Colors */
 .icon-close, .icon-check {
   color: #4285f4;
 }
 
-.bg-drack {
+/* Background Colors */
+.bg-dark {
   background: #f1f1f1;
 }
 
@@ -299,6 +320,7 @@ button:focus {
   background: #fff;
 }
 
+/* Margin Utilities */
 .mb-30 {
   margin-bottom: 30px;
 }
@@ -306,6 +328,7 @@ button:focus {
 .mt-30 {
   margin-top: 30px;
 }
+
 
 /* ScrollToTop */
 a.back-to-top {
@@ -657,7 +680,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   padding: 0 15px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Product Sans', sans-serif;
   font-weight: 500;
   line-height: 40px;
   text-transform: uppercase;
@@ -2384,7 +2407,7 @@ footer {
   border: none;
   position: relative;
   height: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Product Sans', sans-serif;
   border-radius: 4px;
   text-align: center;
   font-weight: 400;
@@ -2399,7 +2422,7 @@ footer {
   line-height: 45px;
   font-weight: 700;
   letter-spacing: 0.3;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Product Sans', sans-serif;
   display: block;
   color: #fff;
   margin-bottom: 10px;

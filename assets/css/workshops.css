@@ -1,3 +1,12 @@
+/* Define the font face */
+@font-face {
+    font-family: 'Product Sans';
+    src: url('assets/fonts/Product Sans Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 /* Full-page video background */
 #pricing #bg-video {
     position: fixed; /* Fix the video in the viewport */
@@ -5,6 +14,7 @@
     left: 0;
     width: 200vw; /* Full viewport width */
     height: 200vh; /* Full viewport height */
+
     object-fit: cover; /* Scale the video to cover the entire area without distortion */
     z-index: -1; /* Place the video behind the content */
     opacity: 1; /* Adjust opacity if needed */
@@ -44,6 +54,8 @@ font-size: 30px;
     line-height: 52px;
     font-weight: 700;
     text-align: center;
+    font-family: 'Product Sans', sans-serif;
+
     display: block;
     position: relative;
     margin-bottom: 10px;
@@ -57,12 +69,16 @@ font-size: 30px;
     padding: 10px; /* Adjust padding to control spacing between columns */
     flex: 0 0 25%; /* Adjust to desired width for large screens */
     max-width: 100%;
+    font-family: 'Product Sans', sans-serif;
+
 }
 
 
 .colmun-title h6 {
     color: #000000; /* Set text color to black */
     font-weight: bold; /* Ensure text is bold */
+    font-family: 'Product Sans', sans-serif;
+
 }
 
 
