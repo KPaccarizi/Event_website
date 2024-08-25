@@ -1673,6 +1673,29 @@ h1 {
   -o-transform: scale(1, 1); /* For older Opera versions */
 }
 
+.membership-frame {
+  border: 2px solid #4285f4; /* Blue border color */
+  padding: 20px;             /* Padding inside the frame */
+  border-radius: 10px;       /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  max-width: 600px;          /* Limit the frame width */
+  margin: 0 auto;            /* Center the frame */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  text-align: center;        /* Center-align the text */
+}
+
+.membership-frame p {
+  margin-bottom: 20px; /* Space between text and button */
+}
+
+.membership-frame .btn {
+  margin-top: 10px; /* Additional space above the button */
+  display: inline-block; /* Ensure the button doesn't take up full width */
+  text-align: center;    /* Center text inside the button */
+}
+
+
+
 /* Team Item */
 .team-item:hover {
   box-shadow: 0 16px 48px #E2E8ED;
