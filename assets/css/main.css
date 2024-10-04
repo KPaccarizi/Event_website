@@ -2723,3 +2723,37 @@ footer {
   padding: 12px 40px;
   text-transform: uppercase;
 }
+/* Responsive styles for smaller screens */
+@media (max-width: 991px) {
+  .hero-area-bg {
+    background-size: cover; /* Keep the image covering the entire area */
+    background-position: center center; /* Ensure the image stays centered */
+    background-attachment: scroll; /* Ensure the image scrolls with the content */
+  }
+  
+  #hero-area .contents {
+    padding: 100px 20px 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-area-bg {
+    background-size: cover; /* Cover the area while maintaining proportions */
+    background-position: center center; /* Keep the image centered */
+  }
+
+  #hero-area .contents {
+    padding: 80px 15px 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-area-bg {
+    background-size: cover; /* Ensure the image fills the whole section */
+    background-position: center center; /* Keep it centered */
+  }
+
+  #hero-area .contents {
+    padding: 60px 10px 80px;
+  }
+}
