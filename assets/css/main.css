@@ -1176,7 +1176,6 @@ h1 {
 
 
 /* Sponsors Area */
-/* Sponsors Area */
 #sponsors {
   background: url(../img/background/countdown.jpg) no-repeat center;
   background-attachment: fixed;
@@ -1193,36 +1192,45 @@ h1 {
 #sponsors .sponsors-logo {
   display: flex; /* Use Flexbox for row layout */
   flex-wrap: wrap; /* Allow wrapping if needed */
-  justify-content: center; /* Center align the images */
-  gap: 20px; /* Space between images */
+  justify-content: space-between; /* Distribute logos evenly */
 }
 
 #sponsors .sponsor-item {
-  position: relative; /* Positioning context for the button */
-  display: inline-block; /* Align items inline */
+  flex: 1 0 16%; /* Set each sponsor item to take 16% of the width (6 items per row) */
+  max-width: 16%; /* Prevent item from exceeding this width */
+  margin: 10px; /* Optional: Add margin for spacing */
   text-align: center; /* Center text */
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column; /* Align children vertically */
+  align-items: center; /* Center children horizontally */
 }
 
-#sponsors .sponsors-logo a {
+
+#sponsors .sponsor-item a {
   display: flex; /* Ensure the container is flex to center the image */
   align-items: center; /* Center the image vertically */
   justify-content: center; /* Center the image horizontally */
-  width: 150px; /* Adjust width as needed */
-  height: 150px; /* Adjust height as needed */
-  border: 2px solid #fff; /* Border color and width */
-  border-radius: 50%; /* Make the border round */
-  overflow: hidden; /* Ensure the image fits within the border */
+  height: 150px; /* Fixed height for the logo container */
+  width: 150px; /* Fixed width for the logo container */
+  border-radius: 50%; /* Make the container circular */
+  overflow: hidden; /* Ensure the image fits within the circular container */
+  border: 2px solid #fff; /* Optional: Add border for better visibility */
 }
 
-#sponsors .sponsors-logo a img {
+#sponsors .sponsor-item a img {
   width: 100%; /* Make the image fill the container */
   height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure image doesn't exceed container height */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
 }
 
 #sponsors .sponsor-name {
   margin: 10px 0; /* Space between image and name */
   color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure it takes the full width for centering */
 }
+
 
 #sponsors .read-more-button {
   display: inline-block !important;
@@ -1238,9 +1246,6 @@ h1 {
   margin: 10px 0 !important;
   font-size: 12px !important;
 }
-
-
-
 
 
 
