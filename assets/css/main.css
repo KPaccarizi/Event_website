@@ -1173,8 +1173,6 @@ h1 {
   margin-bottom: 20px;
   font-weight: 700;
 }
-
-
 /* Sponsors Area */
 #sponsors {
   background: url(../img/background/countdown.jpg) no-repeat center;
@@ -1199,13 +1197,100 @@ h1 {
   flex: 1 0 16%; /* Set each sponsor item to take 16% of the width (6 items per row) */
   max-width: 16%; /* Prevent item from exceeding this width */
   margin: 10px; /* Optional: Add margin for spacing */
-  text-align: center; /* Center text */
+  text-align: center !important; /* Center text */
   display: flex; /* Use flexbox for vertical centering */
   flex-direction: column; /* Align children vertically */
   align-items: center; /* Center children horizontally */
 }
+/* Golden Sponsors */
+#sponsors .golden-sponsor {
+  background: linear-gradient(145deg, #ffcc00, #ff9900); /* Gradient background for golden effect */
+  border: 2px solid #f5c000; /* Gold border for emphasis */
+  border-radius: 15px; /* Rounded corners for a smoother, modern look */
+  padding: 20px; /* Added padding for spacing inside */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for a floating effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  display: flex; /* Flexbox for positioning inside */
+  flex-direction: column; /* Ensure content inside is stacked vertically */
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Vertically center content */
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Hover effect for Golden Sponsors */
+#sponsors .golden-sponsor:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover for a more prominent look */
+}
+
+/* Golden Sponsors Text */
+#sponsors .golden-sponsor .sponsor-name {
+  color: #fff; /* White text for contrast */
+  font-weight: bold; /* Bold text to make the name stand out */
+  font-size: 18px; /* Slightly larger text size for better visibility */
+  margin-top: 15px; /* Spacing above the sponsor name */
+  text-transform: uppercase; /* Uppercase text for a stronger appearance */
+}
+
+/* Golden Sponsors Button */
+/* Golden Sponsors Button */
+#sponsors .golden-sponsor .read-more-button {
+  background-color: #ffcc00; /* Gold color for the button */
+  color: #333; /* Dark text color for contrast */
+  border: none; /* Remove border for a cleaner look */
+  padding: 6px 20px; /* Reduce the vertical padding for a shorter height */
+  font-size: 16px; /* Slightly smaller font size */
+  border-radius: 30px; /* Rounded corners */
+  margin-top: 15px; /* Spacing above the button */
+  text-decoration: none; /* Remove underline */
+  display: inline-flex; /* Use inline-flex for better centering */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Ensure text is vertically centered */
+  width: auto; /* Button width should adjust based on content */
+  min-width: 130px; /* Minimum width for button */
+  max-width: 200px; /* Maximum width for button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  text-align: center; /* Center text */
+  line-height: normal; /* Adjust line-height to fit text inside the button */
+}
+
+#sponsors .golden-sponsor .read-more-button:hover {
+  background-color: #e6b800; /* Darken gold when hovered */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
 
 
+
+
+/* Adding animation for golden sponsor items to appear elegantly */
+#sponsors .golden-sponsor {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Support by USAID */
+#sponsors .support-by .sponsor-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: #fbfbfa; /* USAID is usually associated with a yellow/gold color */
+}
+
+/* Sponsor Categories */
+#sponsors .sponsor-category-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Sponsor Item Styles */
 #sponsors .sponsor-item a {
   display: flex; /* Ensure the container is flex to center the image */
   align-items: center; /* Center the image vertically */
@@ -1231,7 +1316,6 @@ h1 {
   width: 100%; /* Ensure it takes the full width for centering */
 }
 
-
 #sponsors .read-more-button {
   display: inline-block !important;
   width: 80px !important;
@@ -1246,7 +1330,6 @@ h1 {
   margin: 10px 0 !important;
   font-size: 12px !important;
 }
-
 
 
 
