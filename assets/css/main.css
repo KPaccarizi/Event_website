@@ -1205,9 +1205,9 @@ h1 {
 /* Golden Sponsors */
 #sponsors .golden-sponsor {
   background: linear-gradient(145deg, #ffcc00, #ff9900); /* Gradient background for golden effect */
-  border: 2px solid #f5c000; /* Gold border for emphasis */
+  border: 1px solid #f5c000; /* Gold border for emphasis */
   border-radius: 15px; /* Rounded corners for a smoother, modern look */
-  padding: 20px; /* Added padding for spacing inside */
+  padding: 10px; /* Added padding for spacing inside */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for a floating effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
   display: flex; /* Flexbox for positioning inside */
