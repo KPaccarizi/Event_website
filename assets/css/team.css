@@ -70,80 +70,64 @@ h2 {
     color: #003366; /* Dark blue */
     font-size: 2rem;
 }
-
+/* Update for the team-container to display in a single row */
 .team-container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Space out the team members evenly */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     gap: 1rem;
 }
 
+/* Update team-member to fit five in a row */
 .team-member {
     background: linear-gradient(135deg, #f0faff, #e0eaff); /* Light blue gradient */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     text-align: center;
-    width: calc(25% - 1rem); /* Adjust width for 4 columns */
+    width: calc(20% - 1rem); /* Adjust width for 5 items in a row */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Reduce the width to make the frames smaller */
 }
 
-.team-member:hover {
-    transform: translateY(-5px); /* Elevate on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
+/* Optional: reduce the size of the images for a more compact look */
 .team-img {
-    width: 120px; /* Slightly larger image */
-    height: 120px;
+    width: 90px; /* Smaller image size */
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #007bff; /* Blue border around image */
 }
 
-.info-text {
-    margin-top: 0.5rem;
-    font-family: 'Product Sans', sans-serif;
-
-    
+/* Reduce the size of titles for a compact look */
+.info-text h4 {
+    font-size: 1rem; /* Smaller title font */
 }
 
-.info-text h3 {
-    margin: 0.5rem 0;
-    color: #003366; /* Dark blue */
-    
+.info-text h5 {
+    font-size: 0.875rem; /* Smaller subtitle font */
 }
 
-.social-links {
-    margin-top: 1rem;
+/* Hover effect to slightly elevate the card */
+.team-member:hover {
+    transform: translateY(-5px); /* Elevate on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Reduce social link icon size */
 .social-links a {
-    color: #0b2238; /* Dark blue */
-    margin: 0 0.5rem;
-    font-size: 1.5rem; /* Increased size for better visibility */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #2a4461; /* Blue on hover */
-}
-
-.section-separator {
-    border: 0;
-    border-top: 2px solid #007bff; /* Blue separator line */
-    margin: 2rem 0;
+    font-size: 1.2rem; /* Smaller icons */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .team-member {
-        width: calc(50% - 1rem);
+        width: calc(50% - 1rem); /* Two items per row on medium screens */
     }
 }
 
 @media (max-width: 480px) {
     .team-member {
-        width: 100%;
+        width: 100%; /* One item per row on small screens */
     }
 }
